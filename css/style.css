@@ -1,0 +1,11 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin: 0;
+    padding: 0; */
+}
+.animeCard{
+    width: 300px;
+    /* height: 600px; */
+    display: flex;
+    flex-direction: column;
+}
