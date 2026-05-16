@@ -26,6 +26,14 @@ header {
     color: black;
     font-size: 30px;
 }
+.logo p::after{
+    content: "ಠ﹏ಠ";
+}
+.logo:hover p::after{
+  content: "ಠಿ_ಠ";
+
+
+}
 .pagesLinks{
     width: 200px;
    
@@ -43,7 +51,22 @@ header a{
 
 /* main  */
 main{
+    display: flex;
     height: 68vh;
+    justify-content: center;
+    align-items: center;
+    transition: 5s;
+    cursor: pointer;
+}
+.textTitle{
+    display: flex;
+    width: 60px;
+    height: 37px;
+    overflow: hidden;
+    transition: 4s;
+}
+main:hover .textTitle{
+    width: 750px;
 }
 /* footer  */
 footer {
