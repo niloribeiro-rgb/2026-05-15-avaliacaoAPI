@@ -19,15 +19,23 @@ header {
     justify-content: center;
     align-items: center;
     width: 80px;
-    margin-right: 160px;
+    margin-right: 120px;
     height: 200px;
     border-radius: 10px;
     background-color: orange;
     color: black;
     font-size: 30px;
 }
+.logo p::after{
+    content: "ಠ﹏ಠ";
+}
+.logo:hover p::after{
+  content: "눈_눈";
+/* font-size: 20px; */
+
+}
 .pagesLinks{
-    width: 230px;
+    width: 200px;
    
     display: flex;
     gap: 10px;
@@ -54,8 +62,8 @@ main {
     margin-top: 10px;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    /* overflow-x:auto;
-    scroll-snap-type: x mandatory; */
+    overflow-x: auto;
+    /*scroll-snap-type: x mandatory; */
 }
 .animeCardPosition{
     padding: 10px;
