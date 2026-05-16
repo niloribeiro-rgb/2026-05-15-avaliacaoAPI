@@ -1,29 +1,70 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
-     margin: 0;
-    padding: 0; 
+    margin: 0;
+    padding: 0;
 }
-header{
-height:10vh;
-display:flex;
-/* background-color:blue; */
-    justify-content:center;
-    align-items:center;
-}
-.animeContainer{
+
+/* header  */
+header {
+    height: 12vh;
+    padding: 0 20px;
     display: flex;
-    gap:10px;
-    overflow-x:auto;
-    scroll-snap-type: x mandatory;
+    background-color: orangered;
+    justify-content: space-between;
+    align-items: center;
+    
 }
-.animeCard{
-    width: 100%;
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    margin-right: 120px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: orange;
+    color: black;
+    font-size: 30px;
+}
+.pagesLinks{
+    width: 200px;
+   
+    display: flex;
+    gap: 10px;
+}
+header h1{
+    color: white;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+/* main  */
+main{
+    height: 68vh;
+}
+/* footer  */
+footer {
+    margin-top: 10px;
+    background-color:  orangered;
+    color: white;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    scroll-snap-align:center;
-    
-    scroll-snap-stop: always; 
-    /* para nao pular */
-    
+    height: 20vh;
+    justify-content: center;
+     /* justify-content: flex-end; */
+    align-items: center;
+
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(239, 250, 215);
 }
