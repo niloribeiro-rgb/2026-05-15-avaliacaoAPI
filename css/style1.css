@@ -154,6 +154,24 @@ hr {
     border-bottom: 2px;
 }
 
+.addAnimeContainer{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 3px;
+}
+.addAnimeContainer input{
+    padding: 5px;
+}
+.addAnimeContainer button{
+    padding: 5px;
+}
+
+
 /* footer  */
 footer {
     margin-top: 10px;
