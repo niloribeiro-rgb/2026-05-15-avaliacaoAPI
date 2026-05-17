@@ -1,4 +1,4 @@
-let codAnimes = [48583, 52991, 40748, 57555, 20]
+let codAnimes = [48583, 52991, 40748, 44511, 20, 61469]
 async function getAPI1() {
 
     const animeContainer = document.querySelector(`.animeContainer`)
@@ -9,11 +9,6 @@ async function getAPI1() {
         try {
 
             const response = await fetch(`https://api.jikan.moe/v4/anime/${codAnimes[i]}`)
-            // 48583
-            // 52991
-            // 40748
-            // 20
-            // 57555
             const dados = await response.json()
             if (!response.ok) {
                 alert(`Erro: ${response.status} - ${response.statusText} ${i}`)
@@ -31,7 +26,6 @@ async function getAPI1() {
             console.log(dados.data.trailer.embed_url)
             }
 
-            // alert(dados.data.rating)
             let cardConteudo = ""
             cardConteudo += `<div class="animeCardPosition"><div class="animeCard" id="animeCard${i}">
         <img src="${dados.data.images.webp.large_image_url}" alt="${dados.data.title}">
@@ -53,3 +47,7 @@ async function getAPI1() {
     }
 }
 getAPI1()
+function newCard(){
+    // https://api.jikan.moe/v4/anime?q=${}&limit=5
+    // codAnimes
+}
