@@ -22,8 +22,8 @@ async function getAPI1() {
                 }
                 // for recorta da casa 39 a 51 do link recebido
                 // da letra 39 ate 51 é padrao da chave principal do video 
-            console.log(videoKey)
-            console.log(dados.data.trailer.embed_url)
+                console.log(videoKey)
+                console.log(dados.data.trailer.embed_url)
             }
 
             let cardConteudo = ""
@@ -35,8 +35,8 @@ async function getAPI1() {
         </div>
         <p>${dados.data.rating}</p>`
             if (dados.data.trailer.embed_url !== null) {
-                 cardConteudo += `<iframe src="https://www.youtube.com/embed/${videoKey}si=R-EVc6WSTISt_vc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
-             }
+                cardConteudo += `<iframe src="https://www.youtube.com/embed/${videoKey}si=R-EVc6WSTISt_vc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
+            }
             // alert(cardConteudo)
             animeContainer.innerHTML += `${cardConteudo} <hr> ${i} | id:${dados.data.mal_id} | ${dados.data.type} </div></div>`
 
@@ -47,7 +47,27 @@ async function getAPI1() {
     }
 }
 getAPI1()
-function newCard(){
-    // https://api.jikan.moe/v4/anime?q=${}&limit=5
-    // codAnimes
+
+async function newCard() {
+    let nomeAnime = document.querySelector(`#nomeAnime`).value
+    let indexAnime = document.querySelector(`#indexAnime`).value
+    try {
+        const response = await fetch(`https://api.jikan.moe/v4/anime?q=${nomeAnime}&limit=5`)
+        const dados = await response.json()
+        if (!response.ok) {
+            alert(`Erro: ${response.status} - ${response.statusText}`)
+        }
+        // alert(dados.data[indexAnime].mal_id)
+        if (dados.data[indexAnime].mal_id !== null) {
+            codAnimes.push(dados.data[indexAnime].mal_id)
+        }
+        else{
+            alert("ops! nao tem esse index")
+            return
+        }
+    }
+    catch (error) {
+        console.error(error)
+    }
+    getAPI1()
 }
