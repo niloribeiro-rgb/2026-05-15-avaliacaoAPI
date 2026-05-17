@@ -12,9 +12,10 @@ header {
     background-color: orangered;
     justify-content: space-between;
     align-items: center;
-    
+
 }
-.logo{
+
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,25 +27,53 @@ header {
     color: black;
     font-size: 30px;
 }
-.logo p::after{
+
+.logo p::after {
     content: "ಠ﹏ಠ";
 }
-.logo:hover p::after{
-  content: "눈_눈";
-/* font-size: 20px; */
+
+.logo:hover p::after {
+    content: "눈_눈";
+    /* font-size: 20px; */
 
 }
-.pagesLinks{
+
+.pagesLinks {
+    margin-right: 40px;
     width: 200px;
-   
+    height: 10vh;
     display: flex;
     gap: 10px;
 }
-header h1{
+
+.pagesLinks a {
+    position: relative;
+    padding: 25px 0;
+}
+
+.pagesLinks a:hover {
+    color: rgb(253, 234, 198);
+}
+
+.pagesLinks a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid;
+    transition: 0.3s ease;
+}
+
+.pagesLinks a:hover::after {
+    width: 100%;
+}
+
+header h1 {
     color: white;
 }
 
-header a{
+header a {
     color: white;
     text-decoration: none;
 }
@@ -65,11 +94,13 @@ main {
     overflow-x: auto;
     /*scroll-snap-type: x mandatory; */
 }
-.animeCardPosition{
+
+.animeCardPosition {
     padding: 10px;
     width: 320px;
     height: 130vh;
 }
+
 .animeCard {
     position: relative;
     padding: 10px;
@@ -84,7 +115,8 @@ main {
     z-index: 3;
     border-bottom: 3px solid rgb(129, 157, 158);
 }
-.animeCard:hover{
+
+.animeCard:hover {
     z-index: 10;
 }
 
@@ -118,20 +150,21 @@ iframe {
     height: 200px;
 }
 
-hr{
+hr {
     border-bottom: 2px;
 }
+
 /* footer  */
 footer {
     margin-top: 10px;
-    background-color:  orangered;
+    background-color: orangered;
     color: white;
     display: flex;
     flex-direction: column;
     gap: 10px;
     height: 20vh;
     justify-content: center;
-     /* justify-content: flex-end; */
+    /* justify-content: flex-end; */
     align-items: center;
 
 }
