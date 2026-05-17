@@ -35,10 +35,30 @@ header {
 
 }
 .pagesLinks{
+    margin-right: 40px;
     width: 200px;
-   
+    height: 10vh;
     display: flex;
     gap: 10px;
+}
+.pagesLinks a{
+    position: relative;
+    padding: 25px 0;
+}
+.pagesLinks a:hover{
+    color: rgb(253, 234, 198);
+}
+.pagesLinks a::after{
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid;
+    transition: 0.3s ease;
+}
+.pagesLinks  a:hover::after{
+    width: 100%;
 }
 header h1{
     color: white;
